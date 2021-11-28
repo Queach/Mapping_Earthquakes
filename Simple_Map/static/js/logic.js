@@ -20,8 +20,8 @@ let baseMaps = {
 
 // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
-    center: [30, 30],
-    zoom: 2,
+    center: [43.7, -79.3],
+    zoom: 11,
     layers: [streets]
 })
 
@@ -29,10 +29,10 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
 
 // Accessing the airport GeoJSON URL
-let torontoNeighborhoods = "https://raw.githubusercontent.com/Queach/Mapping_Earthquakes/Mapping_GeoJSON_Polygons/torontoNeighborhoods.json";
+let torontoHoods = "https://raw.githubusercontent.com/Queach/Mapping_Earthquakes/Mapping_GeoJSON_Polygons/torontoNeighborhoods.json";
 
 // Grabbing our GeoJSON data.
-d3.json(torontoNeighborhoods).then(function(data) {
+d3.json(torontoHoods).then(function(data) {
     console.log(data);
   // Creating a GeoJSON layer with the retrieved data.
   L.geoJSON(data).addTo(map);
