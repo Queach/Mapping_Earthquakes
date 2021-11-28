@@ -35,7 +35,6 @@ let map = L.map('mapid', {
     layers: [streets]
 })
 
-
 // Pass our map layers into our layers control and add the layers control to the map.
 L.control.layers(baseMaps, overlays).addTo(map);
 
