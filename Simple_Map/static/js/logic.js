@@ -2,10 +2,13 @@
 console.log("working");
 
 // Create the map object with a center and zoom level.
-let map = L.map('mapid').setView([37.5, -122.5], 10);
+let map = L.map('mapid').setView([30, 30], 2);
 
 // Get data from cities.js
 let cityData = cities;
+
+// Accessing the airport GeoJSON URL
+let airportData = "https://raw.githubusercontent.com/Queach/Mapping_Earthquakes/main/majorAirports.json";
 
 // Add GeoJSON data.
 let sanFranAirport =
